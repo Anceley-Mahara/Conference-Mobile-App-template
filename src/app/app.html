@@ -1,0 +1,78 @@
+<ion-menu [content]="content">
+        <ion-split-pane>
+    <ion-header class="img" align="center">
+        <img padding src="assets/imgs/ict.png"/>
+        <ion-list-header no-margin color="ict" class="background">
+            Currently Registered as:
+            <p>{{email}}</p>
+            <span ion-text class="fw500"><b>ICT SUMMIT</b></span>
+        </ion-list-header>
+    </ion-header>
+  
+    <ion-content >
+            <ion-list>
+                    <ion-list-header no-margin color="inner_arc">
+                        <span ion-text class="fw500" ><b>Your Account</b></span>
+                    </ion-list-header>
+                    <button menuClose ion-item *ngFor="let menuItem of pagesAccount" [class.activeHighlight]="checkActive(menuItem)"  (click)="openPage(menuItem)">
+                    <ion-icon item-left [name]="menuItem.icon" [color]="menuItem.color"></ion-icon>
+                    {{menuItem.title}}
+                    </button>
+          </ion-list>
+
+        <ion-list>
+            <ion-list-header no-margin color="inner_arc" class="background">
+                <span ion-text class="fw500"><b>Events</b></span>
+            </ion-list-header>
+            <button menuClose ion-item *ngFor="let menuItem of pagesEvent" [class.activeHighlight]="checkActive(menuItem)"  (click)="openPage(menuItem)">
+            <ion-icon item-left [name]="menuItem.icon" [color]="menuItem.color"></ion-icon>
+            {{menuItem.title}}
+            </button>
+        </ion-list>
+  
+        <ion-list>
+            <ion-list-header no-margin color="inner_arc" class="background">
+                <span ion-text class="fw500"><b>General</b></span>
+            </ion-list-header>
+            <button menuClose ion-item *ngFor="let menuItem of pagesActivity" [class.activeHighlight]="checkActive(menuItem)"  (click)="openPage(menuItem)">
+            <ion-icon item-left [name]="menuItem.icon" [color]="menuItem.color"></ion-icon>
+            {{menuItem.title}}
+            </button>
+        </ion-list>
+  
+        <ion-list>
+            <ion-list-header no-margin color="inner_arc" class="background">
+                <span ion-text class="fw500"><b>Anouncements</b></span>
+            </ion-list-header>
+            <button menuClose ion-item *ngFor="let menuItem of pagesAnnouncement" [class.activeHighlight]="checkActive(menuItem)"  (click)="openPage(menuItem)">
+            <ion-icon item-left [name]="menuItem.icon" [color]="menuItem.color"></ion-icon>
+            {{menuItem.title}}
+            </button>
+        </ion-list>
+  
+        <ion-list>
+            <ion-list-header no-margin color="inner_arc" class="background">
+                <span ion-text class="fw500"><b>About the Summit</b></span>
+            </ion-list-header>
+            <button menuClose ion-item *ngFor="let menuItem of pagesAboutUs"  [class.activeHighlight]="checkActive(menuItem)" (click)="openPage(menuItem)">
+            <ion-icon item-left [name]="menuItem.icon" [color]="menuItem.color"></ion-icon>
+            {{menuItem.title}}
+            </button>
+        </ion-list>
+  
+        <ion-list>
+                <ion-list-header no-margin color="inner_arc" class="background">
+                    <span ion-text class="fw500"><b>Manage your Leads</b></span>
+                </ion-list-header>
+                <button menuClose ion-item *ngFor="let menuItem of pagesAdmin"  [class.activeHighlight]="checkActive(menuItem)" (click)="openPage(menuItem)">
+                <ion-icon item-left [name]="menuItem.icon" [color]="menuItem.color"></ion-icon>
+                {{menuItem.title}}
+                </button>
+            </ion-list>
+
+    </ion-content>
+</ion-split-pane>  
+  </ion-menu>
+  
+  <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+  <ion-nav [root]="rootPage" #content swipeBackEnabled="false" main name="app"></ion-nav>

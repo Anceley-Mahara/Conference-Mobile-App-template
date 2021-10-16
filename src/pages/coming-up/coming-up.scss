@@ -1,0 +1,166 @@
+page-coming-up {
+  /*  .background {
+        background-image: url('../assets/img/backgroun_audience.jpg');
+        background-image: linear-gradient(to bottom, #31a9b8, #7abcd5, #b2cfe8, #dfe5f4, #ffffff);
+        background-repeat: no-repeat;
+        //    -webkit-background-size: 100%;
+        //    -moz-background-size: 100%;
+        //    background-size: 100%;
+        height: 100%;
+        position: absolute;
+        background-position: center;
+      }
+    */
+      ion-card.card {
+      //  box-shadow: none;
+        background: rgb(255, 255, 255);
+        border-radius: 5px;
+        text-decoration-color: #fff;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    
+      //  img {
+      //    height: 100%;
+      //  }
+      }
+    
+      .lab-el{
+        text-decoration-color: #ff0000;
+      }
+    
+      .slid{
+        background: rgba(255,255,255,1.0);
+        background-image: url('../assets/imgs/coffee.png');
+        background-size: 80%;
+    
+        background-repeat: no-repeat;
+        //position: absolute;
+        background-position: center;
+    
+      }
+    
+      .transp {
+        background: rgba(255,255,255,.95);
+        //  color: #fff;
+      }
+    
+      .fulltransp {
+        background: rgba(255,255,255,0);
+        //  color: #fff;
+      }
+    
+          .card-title {
+      //    position: absolute;
+        //  top: 36%;
+          font-size: 2.0em;
+          width: 100%;
+          font-weight: bold;
+          color: #8E0D00;
+        }
+    
+        .card-subtitle {
+          font-size: 1.0em;
+    //      position: absolute;
+    //      top: 52%;
+          width: 100%;
+          color: #8E0D00;
+        }
+    
+        .tap-msg {
+          font-size: 0.8em;
+    //      position: absolute;
+    //      top: 52%;
+          width: 100%;
+          color: #8E0D00;
+          font-weight: bold;
+        }
+    
+        .details {
+          margin:0 10px;
+          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+      
+          ion-segment {
+            .segment-button {
+              background:#ececec;
+              color:#010101;
+              border:none;
+              box-shadow:none;
+              font-size:14px;
+      
+              &.segment-activated {
+                background-color:#FFF;
+                color:#010101;
+                border:none;
+              }
+            }
+          }
+      
+          @font-face {
+      font-family: MyFont;
+      src: url("../assets/fonts/OpenSans-Regular.ttf");
+      }
+      
+      body, span, button, h1, h2, h3, h4, h5, h6, p, div, ion-item, ion-title {
+      font-family: 'MyFont' !important;
+      }
+      
+          .slider-pager-page
+          {
+            color: white;
+            fill: #f90;
+            stroke: red;
+            background-color: blue;
+          }
+          .slider-pager-page.active
+          {
+            fill: #f90;
+            stroke: red;
+            color: red;
+            background-color: red;
+          }
+      
+          .swiper-pagination {
+      padding: 3px;
+      bottom:0px;
+      .swiper-pagination-bullet {
+        background: #FFF;
+        margin: 0 3px;
+      }
+      }
+      
+          .background {
+        background-image: url('../assets/imgs/cardbg.jpg');
+      
+      //  background-repeat: no-repeat;
+        //    -webkit-background-size: 100%;
+        //    -moz-background-size: 100%;
+        //    background-size: 100%;
+      //  height: 100%;
+      //  position: absolute;
+      //  background-position: center;
+      }
+      
+          .emph {
+        display:block;
+        color: color($colors, success);
+        font-size:26px;
+        font-weight:bold;
+        margin-bottom:5px;
+      }
+      
+          .segment-content {
+            background:#FFF;
+            padding:15px;
+          }
+        }
+  
+
+      }
+
+      .full-image {
+        width: 70%;
+        height: 70%;
+        padding-left: 20%;
+        padding-top: 5%;
+        
+      }

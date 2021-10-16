@@ -1,0 +1,21 @@
+page-post-detail {
+.di {
+  text-decoration-color: #000000;
+}
+
+  .ioncon {
+    background-color: #DDDEDE;
+    text-decoration-color: #fff;
+  }
+
+  .background {
+    background-image: url('../assets/img/smalllogo.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: 80%;
+    -moz-background-size: 80%;
+    background-size: 80%;
+    height: 100%;
+    position: absolute;
+    background-position: center;
+  }
+}

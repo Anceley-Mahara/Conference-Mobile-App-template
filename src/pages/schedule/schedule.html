@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-navbar no-border-bottom  color="ict">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Programme</ion-title>
+
+  </ion-navbar>
+
+
+  <ion-segment [(ngModel)]="segment">
+      <ion-segment-button value="d1">
+        Day 1
+      </ion-segment-button>
+      <ion-segment-button value="d2">
+        Day 2
+      </ion-segment-button>
+      <ion-segment-button value="d3">
+        Day 3
+        </ion-segment-button>
+    </ion-segment>
+</ion-header>
+
+<ion-content class="background">
+  <div [ngSwitch]="segment">
+      <ion-list *ngSwitchCase="'d1'">
+    <ion-item-group>
+
+      <div  *ngFor="let session of day1List">
+  
+        <button color="{{session.color}}" ion-item (click)="goToSessionDetail(session)">
+         
+          <h3 text-wrap>{{session.name}}</h3>
+          <p>
+              Time: {{session.timeStart}} &mdash;
+            {{session.timeEnd}}
+            </p><p>
+           Venue: {{session.location}}
+          </p>
+        </button>
+
+    </div>
+
+    </ion-item-group>
+
+  </ion-list>
+
+
+  <ion-list *ngSwitchCase="'d2'">
+       <ion-item-group>
+             
+              <div  *ngFor="let session of day2List">
+  
+                  <button color="{{session.color}}" ion-item (click)="goToSessionDetail(session)">
+                   
+                    <h3 text-wrap>{{session.name}}</h3>
+                    <p>
+                        Time: {{session.timeStart}} &mdash;
+                      {{session.timeEnd}}
+                      </p><p>
+                     Venue: {{session.location}}
+                    </p>
+                  </button>
+          
+              </div>
+        </ion-item-group>
+    
+      </ion-list>
+
+
+      <ion-list *ngSwitchCase="'d3'">
+            <ion-item-group>
+                <div  *ngFor="let session of day3List">
+  
+                    <button color="{{session.color}}" ion-item (click)="goToSessionDetail(session)">
+                     
+                      <h3 text-wrap>{{session.name}}</h3>
+                      <p>
+                          Time: {{session.timeStart}} &mdash;
+                        {{session.timeEnd}}
+                        </p><p>
+                       Venue: {{session.location}}
+                      </p>
+                    </button>
+            
+                </div>
+            </ion-item-group>
+        
+          </ion-list>
+</div>
+
+  <ion-list-header [hidden]="shownSessions > 0">
+      Tap the day
+  </ion-list-header>
+
+</ion-content>

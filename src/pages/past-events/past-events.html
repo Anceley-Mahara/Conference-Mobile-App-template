@@ -1,0 +1,50 @@
+<!--
+  Generated template for the PastEventsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <!--<ion-navbar color="ict">
+    <button ion-button menuToggle item-start>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Past Events</ion-title>
+  </ion-navbar>-->
+
+</ion-header>
+
+
+<ion-content no-padding class="background">
+        <ion-fab top left >
+                <button color="ict" menuToggle ion-fab mini>
+                  <ion-icon name="md-menu"></ion-icon>
+                </button>
+              </ion-fab>
+  <ion-list class="competition-list" *ngFor="let item of propertyList">
+
+
+    <ion-card>
+           <ion-thumbnail item-left no-padding>
+               <img src="{{item.logo}}" class="full-image">
+           </ion-thumbnail>
+
+     <ion-card-content>
+           <header>
+               <h2>{{item.eventname}}</h2>
+           </header>
+           <p>
+   {{item.brief}}              </p>
+       <!--  <div style="display:flex">
+             <ion-item id="rounded">
+             <ion-input [(ngModel)]="answer" type="number" placeholder="Answer...">
+         </ion-input>
+             </ion-item>
+             </div>-->
+  
+     </ion-card-content>
+    </ion-card>
+
+   </ion-list>
+</ion-content>

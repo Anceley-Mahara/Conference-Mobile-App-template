@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>904951502575-p8c8l0fm1f2rln4io0nbkd1ai9ca8ddq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.904951502575-p8c8l0fm1f2rln4io0nbkd1ai9ca8ddq</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCI7pcwAHDzb-MsiSehy1cxUJGcvgjFaCY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>904951502575</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.ictsummit.nam</string>
+	<key>PROJECT_ID</key>
+	<string>ictsummit-af35b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ictsummit-af35b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:904951502575:ios:03bc86c3c2c4f92b</string>
+	<key>DATABASE_URL</key>
+	<string>https://ictsummit-af35b.firebaseio.com</string>
+</dict>
+</plist>

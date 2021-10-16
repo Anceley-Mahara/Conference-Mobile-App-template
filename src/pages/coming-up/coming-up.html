@@ -1,0 +1,106 @@
+<!--
+  Generated template for the ComingUpPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <!--  <ion-navbar color="ict">
+        <button ion-button menuToggle item-start>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>ICT Events</ion-title>
+  </ion-navbar> 
+  <div padding top="5px"></div>-->
+
+</ion-header>
+
+
+<ion-content no-padding class="background">
+
+  <ion-fab top left >
+    <button color="ict" menuToggle ion-fab mini>
+      <ion-icon name="md-menu"></ion-icon>
+    </button>
+  </ion-fab>
+
+    <ion-list *ngFor="let item of propertyList" class="card-img-wrap">
+
+
+
+        <ion-card>
+            <ion-fab top right >
+                <button color="ict"  ion-fab mini  (tap)="socialshare(item)">
+                  <ion-icon name="md-share"></ion-icon>
+                </button>
+              </ion-fab>
+               <ion-thumbnail item-left no-padding>
+                   <img src="{{item.logo}}" class="full-image"  (click)="itemTapped($event, item)">
+               </ion-thumbnail>
+ 
+              
+         <ion-card-content>
+               <header>
+                  <h2><strong>{{item.eventname}}</strong></h2>
+                  
+                   <span class="price">Admission: {{item.admission}} 
+
+                  </span>
+
+               </header>
+               <p>
+       {{item.brief}}       </p><div color="danger">
+<p>{{item.eventstart}}  {{item.eventend}}</p></div>
+ <!--              <div style="display:flex">
+               <ion-item id="rounded">
+                 <ion-input [(ngModel)]="answer" type="text" placeholder="Leave a comment...">      
+             </ion-input> <button ion-button item-right color="ict" (click)="postComment()"><ion-icon name="md-send"></ion-icon></button>
+                 </ion-item>
+                
+                 </div>
+
+               <div class="details" padding-bottom>
+
+                    <ion-segment [(ngModel)]="item.dets">
+                      <ion-segment-button value="details">
+                        Details
+                      </ion-segment-button>
+                      <ion-segment-button value="reviews">
+                        Comments
+                      </ion-segment-button>
+                    </ion-segment>
+                
+                    <div [ngSwitch]="item.dets">
+                      <div *ngSwitchCase="'details'" class="segment-content">
+                        <p>
+                          {{item.description}}
+                        </p>
+                        <p>
+                          {{item.details}}
+                        </p>
+                        <p>
+               
+                        </p>
+                      </div>
+                
+                      <div *ngSwitchCase="'reviews'" class="segment-content">
+                        <ion-list>
+                            <ion-item text-wrap  >
+                                                         <button ion-button>load comments</button>
+                            </ion-item>
+                
+                          </ion-list>
+                      </div>
+                    </div>
+                  </div>
+-->         </ion-card-content>
+        </ion-card>
+   
+
+
+       </ion-list>
+
+
+
+</ion-content>

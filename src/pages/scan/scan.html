@@ -1,0 +1,59 @@
+<!--
+  Generated template for the ScanPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+      <ion-navbar color="ict">
+          <button ion-button menuToggle item-start>
+              <ion-icon name="menu"></ion-icon>
+          </button>
+    <ion-title>Business Leads</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <button color="danger" ion-button round full (click)="Qrscan()">Tap to Scan QR/Bar code</button>
+    <br>
+    <ion-grid *ngIf="scanCodeData">
+      <ion-row>
+        <ion-col>
+              <p>Scan Result : {{(scanCodeData.text)}}</p>
+             <!-- <p>Scan Extract : {{(scanCodeData.text)?.substring(33)}}</p> -->
+  <ion-input id="myInput" [(ngModel)]="scanCodeData.text"></ion-input>
+             
+        </ion-col>
+      </ion-row>
+       
+   <!--    <ion-row  id="myInput" padding>
+   
+                     <ion-list no-padding radio-group *ngFor="let auction of auctionsList"  [(ngModel)]="auct">
+      <div>
+                        <ion-item no-padding text-wrap>
+                          <ion-label>{{auction.title}} <p>{{auction.a_date}}</p></ion-label>
+                          <ion-radio value="{{auction.title}}" ></ion-radio>
+                          <ion-input [(ngModel)]="auctadd" value="{{auction.address}}" hidden="true"></ion-input>
+                        </ion-item>
+                      </div>
+                      </ion-list> 
+  
+                    </ion-row>-->
+  
+  
+                    </ion-grid>
+                    <div style="display:flex">
+                        <ion-item id="rounded">
+                       <!-- <ion-input wrap-text [(ngModel)]="question" type="text" placeholder="Question...">
+                           </ion-input>-->
+           
+                           <textarea placeholder="Type in the conversation" cols="30" #myInput id="myInput" rows="5" maxLength="180" ng-trim="false"  (input)="checkLength(question)" [(ngModel)]="question"></textarea>
+                           <p>{{lengthLeft}} left</p>
+                        </ion-item>
+                        </div>
+
+                        <button color="success" ion-button round full (click)="saveContact(scanCodeData,question)">Save Contact</button>
+</ion-content>
